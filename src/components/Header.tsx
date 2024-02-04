@@ -1,8 +1,10 @@
 'use client'
-import { signIn } from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
 
 export default function Header() {
 
+
+const { data: session } = useSession()
   return (
     <header className="flex justify-center items-center z-10 relative p-5">
       <h1 className="text-white text-xl italic">Jolworking</h1>
